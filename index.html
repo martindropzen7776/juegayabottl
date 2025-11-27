@@ -25,79 +25,80 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=4036606799898981&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-  
+
 <style>
-  :root{
-    /* PALETA JUEGAYA */
-    --bg:#020822;          /* fondo azul muy oscuro */
-    --card:#050C29;        /* carta ligeramente más clara */
-    --card-soft:#071035;   /* variante suave */
-    --text:#ffffff;        /* texto blanco */
-    --accent:#ff3b30;      /* rojo JuegaYa */
-    --accent-soft:#ff715f; /* rojo suave */
-  }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
+    body, html {
+        height: 100%;
+        background-color: #c2c1ae;
+    }
 
-  body{
-    min-height:100vh;
-    font-family:'Baloo 2','Montserrat',sans-serif;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:radial-gradient(circle at top, #09133d 0, var(--bg) 45%, #01020f 100%);
-    color:var(--text);
-    padding:0px;
-    overflow: hidden
-  }
+    @font-face {
+        font-family: 'MiFuente';
+        src: url('mi-fuente.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-  .container{
-    max-width:420px;
-    width:100%;
-    text-align:center;
-    margin-top:-20px;
-  }
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('background.jpeg');
+    background-size: contain; /* o cover, según prefieras */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black; /* opcional, para tapar bordes */
+}
 
-  .logo{
-    margin:0 auto 28px;
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    padding:6px; 
-    background:conic-gradient(
-      from 0deg,
-      var(--accent),
-      var(--accent)
-    );
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 12px 30px rgba(0,0,0,0.75);
-  }
+    .title {
+        font-family: 'MiFuente', sans-serif;
+        font-size: 80px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        color: white;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
 
-  .logo img{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    object-fit:cover;
-    background:var(--bg);
-  }
+    .info {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-  h1{
-    font-size:22px;
-    margin-bottom:6px;
-  }
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-  .verified{
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:0.04em;
-    color:var(--accent-soft);
-    margin-bottom:22px;
-    text-transform:uppercase;
-  }
-
-  .cta-btn{
+ .cta-btn{
     width:100%;
     padding:14px 20px;
     border-radius:999px;
@@ -131,51 +132,35 @@ src="https://www.facebook.com/tr?id=4036606799898981&ev=PageView&noscript=1"
     height:22px;
     pointer-events:none;
   }
+    @keyframes zoomPulse {
+        0% { transform: translate(-50%, -50%) scale(1); }
+        50% { transform: translate(-50%, -50%) scale(1.05); }
+        100% { transform: translate(-50%, -50%) scale(1); }
+    }
 
-  .footer{
-    margin-top:18px;
-  }
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+}
 
-  .footer p{
-    font-size:16px;
-    margin-bottom:6px;
-  }
-
-  .footer h2{
-    font-size:15px;
-    font-weight:700;
-    margin:4px 0;
-  }
-
-  .footer strong{
-    color:var(--accent-soft);
-  }
-</style>
+        /* --- Versión móvil especial --- */
+@media screen and (max-width: 768px) {
+    .landing {
+        height: 100dvh; /* usa viewport dinámico real en móviles */
+        background-size: contain; /* muestra toda la imagen completa */
+        background-color: black; /* rellena si sobra espacio */
+    }
+}
+        
+    </style>
 </head>
-
 <body>
-  <div class="container">
-
-    <div class="logo">
-      <img src="avatar.jpeg" alt="WinPlay">
-    </div>
-    
-<div style="color:#ffffff;">
-  INGRESA A TELEGRAM <span style="color:#ff3131;font-weight:900;">APRETA /START</span> - PLATAFORMA VERIFICADA
-</div>
-
-    
     <button id="btn-telegram" class="cta-btn">
       <span>/start</span>
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="tg-icon" alt="telegram">
     </button>
-
-    <div class="footer">
-      <p>Obtene en tu primera carga <strong>10000$ de regalo!</strong></p>
-      <h2>CARGA Y RETIRA DE MANERA SEGURA - TOCA INICIAR PARA RECIBIR TU BONO</h2>
+  
     </div>
-
-  </div>
 
 <script>
 document.getElementById("btn-telegram").addEventListener("click", function(){
@@ -199,5 +184,8 @@ document.getElementById("btn-telegram").addEventListener("click", function(){
 });
 </script>
 
+  
 </body>
 </html>
+
+  
