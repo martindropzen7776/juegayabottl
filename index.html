@@ -65,78 +65,44 @@
       background-color: black;
     }
 
-    .title {
-      font-family: 'MiFuente', sans-serif;
-      font-size: 80px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-      color: white;
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
+.cta-btn{
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #ffffff;
+  color: var(--bg);
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+  transition: all .18s ease;
+  margin-top: 5px;
 
-    .info {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: white;
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
+  /* ⭐ ESTA LÍNEA SUBE EL BOTÓN ⭐ */
+  margin-bottom: 80px;
 
-    .date {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      color: white;
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-    .cta-btn{
-      width: 100%;
-      max-width: 320px;
-      padding: 14px 20px;
-      border-radius: 999px;
-      border: none;
-      font-size: 16px;
-      font-weight: 800;
-      text-transform: uppercase;
-      cursor: pointer;
-      background: #ffffff;
-      color: var(--bg);
-      letter-spacing: 0.03em;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.6);
-      transition: all .18s ease;
-      margin-top: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
+.cta-btn:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.8);
+  background: var(--accent-soft);
+  color: #ffffff;
+}
 
-    .cta-btn:hover{
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.8);
-      background: var(--accent-soft);
-      color: #ffffff;
-    }
-
-    .cta-btn .tg-icon{
-      width: 22px;
-      height: 22px;
-      pointer-events: none;
-    }
+.cta-btn .tg-icon{
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
 
     @keyframes zoomPulse {
       0% { transform: translate(-50%, -50%) scale(1); }
