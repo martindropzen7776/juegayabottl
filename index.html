@@ -81,15 +81,20 @@
   letter-spacing: 0.03em;
   box-shadow: 0 10px 26px rgba(0,0,0,0.6);
   transition: all .18s ease;
-  margin-top: 5px;
-
-  /* ⭐ ESTA LÍNEA SUBE EL BOTÓN ⭐ */
-  margin-bottom: 200px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0px;
+
+  /* ❗ Quitamos los márgenes que lo empujaban */
+  margin: 0;
+
+  /* ⭐ CENTRADO VERTICAL + HORIZONTAL ⭐ */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cta-btn:hover{
